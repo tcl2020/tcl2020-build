@@ -2,7 +2,12 @@
 
 ## Fork the tcl repository in TCL-2020
 On github.com make a fork of https://github.com/TCL-2020/tcl
-Clone your fork in a working area.
+
+After the fork is ready, git clone your fork in a working area.
+
+You are editing code in your fork.  This will get you ready to make a github.com pull request.
+[See the documentation on pull requests](https://help.github.com/articles/about-pull-requests/)
+
 ```
 $ mkdir $HOME/work
 $ cd $HOME/work
