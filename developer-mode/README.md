@@ -13,8 +13,13 @@ $ mkdir $HOME/work
 $ cd $HOME/work
 $ git clone <your fork's url here>
 ```
+Also check out the TCL-2020/dockerfiles repo repo
+```
+$ git clone git@github.com:TCL-2020/dockerfiles.git
+```
 ## Build the Docker image
 ```
+cd dockerfiles/developer-mode
 $ docker build -t tcl-2020-dev .
 ```
 ## Run the Docker image
