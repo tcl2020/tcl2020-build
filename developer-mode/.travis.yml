@@ -1,7 +1,0 @@
-sudo: required
-services:
-  - docker
-script:
-  - docker build -t tcl-2020-dev .
-  - git clone git@github.com:TCL-2020/tcl
-  - docker run -it -v $PWD:/work --name dev tcl-2020-dev sh /builds/build-tcl.sh
