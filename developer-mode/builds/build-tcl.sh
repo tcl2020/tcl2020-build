@@ -18,13 +18,13 @@ fi
 if [ ! -f /work/.tcl_configured ]; then
 	echo "Running the autoconf configure in /work/tcl/unix"
 	cd /work/tcl/unix
-	./configure --prefix=/usr --exec-prefix=/usr
+	./configure --prefix=/usr --exec-prefix=/usr >/work/.tcl.log 2>&1
 	touch /work/.tcl_configured
 fi
 
 cd /work/tcl/unix
 echo "Building TCL"
-make
+make 2>&1 | tee -a /work/.tcl.log | cut -c1-64
 make install
 
 # fix any permissions messed up by the Docker user id
