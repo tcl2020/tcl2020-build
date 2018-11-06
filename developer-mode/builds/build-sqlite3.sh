@@ -3,12 +3,12 @@
 if [ ! -d  /work/sqlite ]; then
 	mkdir /work/sqlite
 	cd /work/sqlite
-        curl -o t.tar.gz https://www.sqlite.org/2018/sqlite-autoconf-3250200.tar.gz
+        curl -o t.tar.gz https://www.sqlite.org/2018/sqlite-autoconf-3250300.tar.gz
     tar -xf t.tar.gz
 fi
 
 echo Build sqlite3
-cd /work/sqlite/sqlite-autoconf-3250200/
+cd /work/sqlite/sqlite-autoconf-3250300/
 autoreconf -vi
 env CFLAGS=-DSQLITE_ENABLE_COLUMN_METADATA=1 ./configure --prefix=/usr --exec-prefix=/usr
 make
@@ -19,7 +19,7 @@ cp sqlite3 /usr/bin
 /bin/bash ./libtool --finish '/usr/lib/x86_64-linux-gnu'
 
 echo Building sqlite3 TCL extension
-cd /work/sqlite/sqlite-autoconf-3250200/tea
+cd /work/sqlite/sqlite-autoconf-3250300/tea
 ./configure
 make
 make install
