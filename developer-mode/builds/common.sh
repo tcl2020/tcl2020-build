@@ -2,6 +2,7 @@
 
 TCLSH="tclsh8.7"
 export TCLLIBPATH=/usr/lib/tcl8.7/library
+TCL_CONFIG="/work/tcl/unix/tclConfig.sh"
 
 build_setup () {
 	if [ ! -d /work ]; then
