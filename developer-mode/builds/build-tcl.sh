@@ -8,6 +8,8 @@ fi
 if [ ! -d /work/tcl ]; then 
 	echo "No git clone of tcl found".
 	echo "git clone https://github.com/TCL-2020/tcl.git"
+	cd /work
+	git clone https://github.com/TCL-2020/tcl.git
 fi
 
 if [ ! -f /work/tcl/minizip ]; then
