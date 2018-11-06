@@ -6,5 +6,4 @@ services:
 script:
   - cd developer-mode
   - docker build -t tcl-2020-dev .
-  - git clone https://github.com/TCL-2020/tcl
   - docker run -it -v $PWD:/work --name dev tcl-2020-dev sh /builds/build-all.sh
