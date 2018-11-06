@@ -3,7 +3,7 @@
 
 build_setup
 
-build_git_clone tclreadline https://github.com/snoe925/tclreadline.git
+build_git_clone tclreadline https://github.com/flightaware/tclreadline.git
 
 . $TCL_CONFIG
 export LIBS="$TCL_LIBS"
