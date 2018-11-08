@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/sh -e
 . /builds/common.sh
 
 build_setup
 
-build_git_clone yajl-tcl https://github.com/flightaware/yajl-tcl.git
+if [ ! -d /work/yajl-tcl ]; then
+	cd /work && sh /builds/download-yajl-tcl.sh
+fi
 
 cd /work/yajl-tcl
 autoreconf -vi && ./configure && make && make install

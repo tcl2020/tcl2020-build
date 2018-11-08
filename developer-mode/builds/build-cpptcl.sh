@@ -1,10 +1,13 @@
-#!/bin/sh
+#!/bin/sh -e
 . /builds/common.sh
 
 build_setup
 
-build_git_clone cpptcl https://github.com/flightaware/cpptcl.git
+if [ ! -d /work/cpptcl ]; then
+    cd /work && sh /builds/download-cpptcl.sh
+fi
 
 cd /work/cpptcl && make && make install
 
 build_cleanup
+

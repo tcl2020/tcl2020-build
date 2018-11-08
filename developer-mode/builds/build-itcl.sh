@@ -1,11 +1,13 @@
-#!/bin/sh
+#!/bin/sh -e
 . /builds/common.sh
 
 build_setup
 
-build_git_clone itcl https://github.com/tcltk/itcl.git
+if [ ! -d /work/itcl ]; then
+	cd /work && sh /builds/download-itcl.sh
+fi
 
-cd /work/itcl
+cd /work/itcl || exit 1
 # TODO
 # iTcl does not have the TEA files
 # copy them from another project for now
@@ -14,3 +16,4 @@ mkdir tclconfig && cp ../tcllauncher/tclconfig/* tclconfig
 ./configure && make all && make install
 
 build_cleanup
+
