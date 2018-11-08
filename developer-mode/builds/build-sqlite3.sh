@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/sh -e
+. /builds/common.sh
+
+build_setup
 
 if [ ! -d  /work/sqlite ]; then
-	mkdir /work/sqlite
-	cd /work/sqlite
-        curl -o t.tar.gz https://www.sqlite.org/2018/sqlite-autoconf-3250300.tar.gz
-    tar -xf t.tar.gz
+	cd /work && sh /builds/download-sqlite3.sh
 fi
 
 echo Build sqlite3
-cd /work/sqlite/sqlite-autoconf-3250300/
+cd /work/sqlite/sqlite-autoconf-3250300/ || exit 1
 autoreconf -vi
 env CFLAGS=-DSQLITE_ENABLE_COLUMN_METADATA=1 ./configure --prefix=/usr --exec-prefix=/usr
 make
@@ -23,3 +23,6 @@ cd /work/sqlite/sqlite-autoconf-3250300/tea
 ./configure
 make
 make install
+
+build_cleanup
+
