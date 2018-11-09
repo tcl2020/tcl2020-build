@@ -7,7 +7,8 @@ if [ ! -d /work/cpptcl ]; then
     cd /work && sh /builds/download-cpptcl.sh
 fi
 
-cd /work/cpptcl && make && make install
+export TCL_VERSION_MINOR=7
+cd /work/cpptcl && make clean && make && make install
 
 build_cleanup
 
