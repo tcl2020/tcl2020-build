@@ -28,6 +28,6 @@ build_git_clone () {
 build_cleanup () {
 	# fix any permissions messed up by the Docker user id
 	# allow edits to the source outside of the container
-	find /work/tcllib -type d -print0 | xargs -0 chmod go+rwx
-	find /work/tcllib -type f -print0 | xargs -0 chmod go+rw
+	find /work -type d -print0 | xargs -0 chmod go+rwx
+	find /work -type f -print0 | xargs -0 chmod go+rw
 }

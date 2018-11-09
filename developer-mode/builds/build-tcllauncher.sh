@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/sh -e
 . /builds/common.sh
 
 build_setup
 
-build_git_clone tcllauncher https://github.com/flightaware/tcllauncher.git
+if [ ! -d /work/tcllauncher ]; then
+	cd /work && sh /builds/download-tcllauncher.sh
+fi
 
 . $TCL_CONFIG
 export LIBS="$TCL_LIBS"
@@ -11,3 +13,4 @@ export LIBS="$TCL_LIBS"
 cd /work/tcllauncher && autoreconf -vi && ./configure && make && make install
 
 build_cleanup
+

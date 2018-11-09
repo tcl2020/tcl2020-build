@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/sh -e
 . /builds/common.sh
 
 build_setup
 
-build_git_clone tclreadline https://github.com/flightaware/tclreadline.git
+if [ ! -d /work/tclreadline ]; then
+	cd /work && sh /builds/download-tclreadline.sh
+fi
 
 . $TCL_CONFIG
 export LIBS="$TCL_LIBS"
@@ -11,3 +13,4 @@ export LIBS="$TCL_LIBS"
 cd /work/tclreadline && autoreconf -vi && ./configure --with-tk=no && make && make install
 
 build_cleanup
+

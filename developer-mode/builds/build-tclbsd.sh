@@ -1,11 +1,13 @@
-#!/bin/sh
+#!/bin/sh -e
 . /builds/common.sh
 
 build_setup
 
-build_git_clone tclbsd https://github.com/flightaware/tclbsd.git
+if [ ! -d /work/tclbsd ]; then
+	cd /work && sh /builds/download-tclbsd.sh
+fi
 
-cd /work/tclbsd
+cd /work/tclbsd || exit 1
 autoreconf -vi && ./configure && make && make install
 
 build_cleanup
