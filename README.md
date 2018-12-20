@@ -62,3 +62,13 @@ docker run -d -v $PWD/work:/work --name dev tcl-2020-dev
 ```
 
 Then you can enter the docker container instance with ```docker exec -it dev /bin/bash```.
+
+If you have a .tclshrc in your work directory above, it will be executed by the docker image when it starts.
+
+You might also set up a .inputrc and get command line editing in Tcl.  Like put `set editing-mode vi` in your .inputrc to get vi-style editing behavior out of readline.
+
+### Run your container and have it delete upon exit
+
+docker run --rm -it -v $HOME:/root tcl2020/tcl2020
+
+
