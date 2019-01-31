@@ -1,5 +1,7 @@
 FROM tcl2020/developer-mode:latest
 
+RUN touch /.tcl2020-build-core-8-branch-merge-20190131
+
 RUN cd /root && \
     git clone https://github.com/TCL-2020/dockerfiles.git && \
     mkdir /work && \
