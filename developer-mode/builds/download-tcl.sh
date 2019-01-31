@@ -1,2 +1,1 @@
-git clone https://github.com/TCL-2020/tcl.git
-
+git clone --single-branch --branch core-8-branch-merge-20190131 https://github.com/TCL-2020/tcl.git
