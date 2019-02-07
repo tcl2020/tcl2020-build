@@ -1,7 +1,7 @@
 # Helper functions for build scripts
 
-TCLSH="tclsh8.7"
-export TCLLIBPATH=/usr/lib/tcl8.7/library
+TCLSH="tclsh8.6"
+export TCLLIBPATH=/usr/lib/tcl8.6/library
 TCL_CONFIG="/work/tcl/unix/tclConfig.sh"
 
 build_setup () {
