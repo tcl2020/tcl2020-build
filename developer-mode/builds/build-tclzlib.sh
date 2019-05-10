@@ -3,7 +3,7 @@
 
 build_setup
 
-if [ ! -d /work/Pgtcl ]; then
+if [ ! -d /work/tclzlib ]; then
 	cd /work && sh /builds/download-tclzlib.sh
 fi
 
