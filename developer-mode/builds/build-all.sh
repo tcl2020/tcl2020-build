@@ -15,3 +15,4 @@ sh /builds/build-yajl-tcl.sh
 sh /builds/build-tcltls.sh
 sh /builds/build-tdom.sh
 sh /builds/build-tclclockmod.sh
+sh /builds/build-pgtcl.sh
