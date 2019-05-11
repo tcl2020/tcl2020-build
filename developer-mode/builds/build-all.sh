@@ -17,5 +17,5 @@ sh /builds/build-tdom.sh
 sh /builds/build-tclclockmod.sh
 sh /builds/build-pgtcl.sh
 sh /builds/build-zookeepertcl.sh
-sh /builds/build-tclupd.sh
+sh /builds/build-tcludp.sh
 sh /builds/build-tclzlib.sh
