@@ -19,3 +19,4 @@ sh /builds/build-pgtcl.sh
 sh /builds/build-zookeepertcl.sh
 sh /builds/build-tcludp.sh
 sh /builds/build-tclzlib.sh
+sh /builds/build-speedbag.sh
