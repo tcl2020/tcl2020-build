@@ -22,3 +22,4 @@ sh /builds/build-tclzlib.sh
 sh /builds/build-speedbag.sh
 sh /builds/build-kafkatcl.sh
 sh /builds/build-casstcl.sh
+sh /builds/build-speedtables.sh
