@@ -9,7 +9,8 @@ fi
 
 cd /work/cpp-driver || exit 1
 mkdir build
-cmake ..
+cd build
+cmake .. || exit 1
 make
 make install
 
