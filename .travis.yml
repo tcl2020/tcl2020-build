@@ -4,7 +4,6 @@ services:
   - docker
   
 script:
-  - cd developer-mode
-  - docker build -t tcl-2020-dev .
-  - mkdir work
-  - docker run -it -v $PWD/work:/work -v $PWD/builds:/builds:ro --name dev tcl-2020-dev sh /builds/build-all.sh
+  - mkdir build
+  - docker build -t tcl-2020-dev developer-mode
+  - docker run -it -v $PWD/build:/work -v $PWD/developer-mode/builds:/builds:ro --name dev tcl-2020-dev sh /builds/build-all.sh
