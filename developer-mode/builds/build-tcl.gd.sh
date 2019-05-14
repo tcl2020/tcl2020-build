@@ -4,7 +4,7 @@
 build_setup
 
 if [ ! -d /work/tcl.gd ]; then
-	cd /work && sh /builds/download-pgtcl.sh
+	cd /work && sh /builds/download-tcl.gd.sh
 fi
 
 cd /work/tcl.gd || exit 1

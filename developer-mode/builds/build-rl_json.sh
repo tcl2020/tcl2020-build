@@ -4,7 +4,7 @@
 build_setup
 
 if [ ! -d /work/rl_json ]; then
-	cd /work && sh /builds/download-pgtcl.sh
+	cd /work && sh /builds/download-rl_json.sh
 fi
 
 cd /work/rl_json || exit 1
