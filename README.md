@@ -46,10 +46,7 @@ Build everything in tcl2020 using a docker exec.
 docker exec -it dev bash /builds/build-all.sh
 ```
 Modify the source code of any package in the work directory. Then you can use make, cmake, ... to rebuild the container with
-the changes.
-```
-docker exec -it dev bash /builds/build-all.sh
-```
+the changes.  Use the build container with your favorite IDE.
 
 ## source packages for developer-mode
 
