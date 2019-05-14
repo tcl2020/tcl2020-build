@@ -4,7 +4,7 @@
 build_setup
 
 if [ ! -d /work/socketservertcl ]; then
-	cd /work && sh /builds/download-pgtcl.sh
+	cd /work && sh /builds/download-socketservertcl.sh
 fi
 
 cd /work/socketservertcl || exit 1
