@@ -23,3 +23,6 @@ sh /builds/build-speedbag.sh
 sh /builds/build-kafkatcl.sh
 sh /builds/build-casstcl.sh
 sh /builds/build-speedtables.sh
+sh /builds/build-socketservertcl.sh
+sh /builds/build-rl_json.sh
+sh /builds/build-tcl.gd.sh
