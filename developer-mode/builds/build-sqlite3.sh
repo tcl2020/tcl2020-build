@@ -8,7 +8,14 @@ if [ ! -d  /work/sqlite ]; then
 fi
 
 echo Build sqlite3
-cd /work/sqlite/sqlite-autoconf-3250300/ || exit 1
+BUILD_VERSION=$(cd /work/sqlite; ls -v | tail -1)
+if [ ! -d "/work/sqlite/$BUILD_VERSION" ]; then
+    echo "Cannot determine sqlite build version"
+    exit 1
+else
+    echo "Building /work/sqlite/$BUILD_VERSION"
+fi
+cd "/work/sqlite/$BUILD_VERSION/" || exit 1
 autoreconf -vi
 env CFLAGS=-DSQLITE_ENABLE_COLUMN_METADATA=1 ./configure --prefix=/usr --exec-prefix=/usr
 make
@@ -19,7 +26,7 @@ cp sqlite3 /usr/bin
 /bin/bash ./libtool --finish '/usr/lib/x86_64-linux-gnu'
 
 echo Building sqlite3 TCL extension
-cd /work/sqlite/sqlite-autoconf-3250300/tea
+cd "/work/sqlite/$BUILD_VERSION/tea"
 ./configure
 make
 make install

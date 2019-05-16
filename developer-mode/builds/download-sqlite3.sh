@@ -1,2 +1,1 @@
-mkdir sqlite && cd sqlite && curl https://www.sqlite.org/2018/sqlite-autoconf-3250300.tar.gz | tar -xzf -
-
+rm -rf sqlite && mkdir sqlite && cd sqlite && curl https://www.sqlite.org/2019/sqlite-autoconf-3280000.tar.gz | tar -xzf -
