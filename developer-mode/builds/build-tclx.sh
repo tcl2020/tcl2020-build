@@ -3,16 +3,16 @@
 
 build_setup
 
-if [ ! -d /work/tclx ]; then 
-	cd /work && sh /builds/download-tclx.sh
+if [ ! -d /workspace/tclx ]; then 
+	cd /workspace && sh /builds/download-tclx.sh
 fi
 
-echo "Running the autoconf configure in /work/tclx"
-cd /work/tclx || exit 1
+echo "Running the autoconf configure in /workspace/tclx"
+cd /workspace/tclx || exit 1
 autoreconf -vi
 ./configure --prefix=/usr --exec-prefix=/usr
 
-cd /work/tclx || exit 1
+cd /workspace/tclx || exit 1
 echo "Building Tclx"
 make
 make install

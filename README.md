@@ -5,7 +5,7 @@ Build and packaging system based on [Docker](http://docker.org)
 The developer-mode Dockerfile is a monolithic source based build.
 All of the packages are compiled from source on top of a minimal
 OS image based on [Debian-slim](https://hub.docker.com/_/debian/).
-You need to provide a working Docker container on your platform.
+You need to provide a Docker container on your platform.
 The Docker image and container will manage all of the platform packages and build tools needed
 for a source build.
 By using Docker you can easily develop on Linux or OS X.
@@ -29,8 +29,8 @@ The platform packages are installed in the script [developer-mode/setup-docker-e
 This script loads all of the Linux configurations.
 
 If you are creating your own container for tcl2020, then you can replace the tcl-2002-dev container 
-with the Linux system you choose.  The build scripts for tcl2020 should work with many container images which 
-contain the C++ build tools.
+with the Linux system you choose.  The build scripts for tcl2020 should be compatible with any container images which 
+contain the C++ build tools supporting C++17 or better.
 
 ## Using tcl-2020-dev as a build server
 
@@ -39,13 +39,14 @@ You can Docker exec into the container to compile and test installs.
 
 Run the build container in the background with Docker.
 ```
-docker run -d -v $PWD/work:/work -v $PWD/developer-mode/builds:/builds --name dev tcl-2020-dev
+mkdir -p $PWD/workspace
+docker run -d -v $PWD/workspace:/workspace -v $PWD/developer-mode/builds:/builds --name dev tcl-2020-dev
 ```
 Build everything in tcl2020 using a docker exec.
 ```
 docker exec -it dev bash /builds/build-all.sh
 ```
-Modify the source code of any package in the work directory. Then you can use make, cmake, ... to rebuild the container with
+Modify the source code of any package in the workspace directory. Then you can use make, cmake, ... to rebuild the container with
 the changes.  Use the build container with your favorite IDE.
 
 ## source packages for developer-mode

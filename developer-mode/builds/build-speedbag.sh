@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /work/speedbag ]; then
-	cd /work && sh /builds/download-speedbag.sh
+if [ ! -d /workspace/speedbag ]; then
+	cd /workspace && sh /builds/download-speedbag.sh
 fi
 
-cd /work/speedbag || exit 1
+cd /workspace/speedbag || exit 1
 autoreconf --force --install --verbose
 ./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include
 make && make install

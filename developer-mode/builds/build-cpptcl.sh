@@ -3,12 +3,12 @@
 
 build_setup
 
-if [ ! -d /work/cpptcl ]; then
-    cd /work && sh /builds/download-cpptcl.sh
+if [ ! -d /workspace/cpptcl ]; then
+    cd /workspace && sh /builds/download-cpptcl.sh
 fi
 
 export TCL_VERSION_MINOR=7
-cd /work/cpptcl && make clean && make && make install
+cd /workspace/cpptcl && make clean && make && make install
 
 build_cleanup
 

@@ -2,12 +2,12 @@
 
 TCLSH="tclsh8.6"
 export TCLLIBPATH=/usr/lib/tcl8.6/library
-TCL_CONFIG="/work/tcl/unix/tclConfig.sh"
+TCL_CONFIG="/workspace/tcl/unix/tclConfig.sh"
 
 build_setup () {
-	if [ ! -d /work ]; then
-		echo "Missing /work directory."
-		echo "Be sure to docker run -v $WORK_DIR_PATH:/work ..."
+	if [ ! -d /workspace ]; then
+		echo "Missing /workspace directory."
+		echo "Be sure to docker run -v $WORK_DIR_PATH:/workspace ..."
 		exit 1
 	fi
 }
@@ -16,9 +16,9 @@ build_git_clone () {
 	local name="$1"
 	local repo="$2"
 	local extra="$3"
-	if [ ! -d "/work/$name" ]; then
+	if [ ! -d "/workspace/$name" ]; then
 		echo "No git clone of $name found".
-        	cd /work
+        	cd /workspace
 		echo git clone "$extra" "$repo"
 		git clone $extra "$repo"
 	fi
@@ -28,6 +28,6 @@ build_git_clone () {
 build_cleanup () {
 	# fix any permissions messed up by the Docker user id
 	# allow edits to the source outside of the container
-	find /work -type d -print0 | xargs -0 chmod go+rwx
-	find /work -type f -print0 | xargs -0 chmod go+rw
+	find /workspace -type d -print0 | xargs -0 chmod go+rwx
+	find /workspace -type f -print0 | xargs -0 chmod go+rw
 }

@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /work/scotty ]; then
-	cd /work && sh /builds/download-scotty.sh
+if [ ! -d /workspace/scotty ]; then
+	cd /workspace && sh /builds/download-scotty.sh
 fi
 
-cd /work/scotty/tnm || exit 1
+cd /workspace/scotty/tnm || exit 1
 autoreconf --force --install --verbose && \
 ./configure && make && make install
 

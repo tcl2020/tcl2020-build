@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /work/socketservertcl ]; then
-	cd /work && sh /builds/download-socketservertcl.sh
+if [ ! -d /workspace/socketservertcl ]; then
+	cd /workspace && sh /builds/download-socketservertcl.sh
 fi
 
-cd /work/socketservertcl || exit 1
+cd /workspace/socketservertcl || exit 1
 autoreconf --force --install --verbose
 ./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include
 make && make install

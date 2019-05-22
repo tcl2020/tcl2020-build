@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /work/yajl-tcl ]; then
-	cd /work && sh /builds/download-yajl-tcl.sh
+if [ ! -d /workspace/yajl-tcl ]; then
+	cd /workspace && sh /builds/download-yajl-tcl.sh
 fi
 
-cd /work/yajl-tcl
+cd /workspace/yajl-tcl
 autoreconf -vi && ./configure && make && make install
 
 build_cleanup

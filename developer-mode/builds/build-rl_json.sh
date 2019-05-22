@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /work/rl_json ]; then
-	cd /work && sh /builds/download-rl_json.sh
+if [ ! -d /workspace/rl_json ]; then
+	cd /workspace && sh /builds/download-rl_json.sh
 fi
 
-cd /work/rl_json || exit 1
+cd /workspace/rl_json || exit 1
 #autoreconf --force --install --verbose
 ./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include
 make && make install

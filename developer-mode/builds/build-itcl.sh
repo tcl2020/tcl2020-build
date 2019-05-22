@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /work/itcl ]; then
-	cd /work && sh /builds/download-itcl.sh
+if [ ! -d /workspace/itcl ]; then
+	cd /workspace && sh /builds/download-itcl.sh
 fi
 
-cd /work/itcl || exit 1
+cd /workspace/itcl || exit 1
 # TODO
 # iTcl does not have the TEA files
 # copy them from another project for now
