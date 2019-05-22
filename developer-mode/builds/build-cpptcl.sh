@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /workspace/cpptcl ]; then
-    cd /workspace && sh /builds/download-cpptcl.sh
+if [ ! -d /workspaces/cpptcl ]; then
+    cd /workspaces && sh /builds/download-cpptcl.sh
 fi
 
-cd /workspace/cpptcl && make clean && make && make install
+cd /workspaces/cpptcl && make clean && make && make install
 
 build_cleanup
 

@@ -3,19 +3,19 @@
 
 build_setup
 
-if [ ! -d  /workspace/sqlite ]; then
-	cd /workspace && sh /builds/download-sqlite3.sh
+if [ ! -d  /workspaces/sqlite ]; then
+	cd /workspaces && sh /builds/download-sqlite3.sh
 fi
 
 echo Build sqlite3
-BUILD_VERSION=$(cd /workspace/sqlite; ls -v | tail -1)
-if [ ! -d "/workspace/sqlite/$BUILD_VERSION" ]; then
+BUILD_VERSION=$(cd /workspaces/sqlite; ls -v | tail -1)
+if [ ! -d "/workspaces/sqlite/$BUILD_VERSION" ]; then
     echo "Cannot determine sqlite build version"
     exit 1
 else
-    echo "Building /workspace/sqlite/$BUILD_VERSION"
+    echo "Building /workspaces/sqlite/$BUILD_VERSION"
 fi
-cd "/workspace/sqlite/$BUILD_VERSION/" || exit 1
+cd "/workspaces/sqlite/$BUILD_VERSION/" || exit 1
 autoreconf -vi
 env CFLAGS=-DSQLITE_ENABLE_COLUMN_METADATA=1 ./configure --prefix=/usr --exec-prefix=/usr
 make
@@ -26,7 +26,7 @@ cp sqlite3 /usr/bin
 /bin/bash ./libtool --finish '/usr/lib/x86_64-linux-gnu'
 
 echo Building sqlite3 TCL extension
-cd "/workspace/sqlite/$BUILD_VERSION/tea"
+cd "/workspaces/sqlite/$BUILD_VERSION/tea"
 ./configure
 make
 make install

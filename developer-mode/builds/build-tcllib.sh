@@ -3,16 +3,16 @@
 
 build_setup
 
-if [ ! -d /workspace/tcllib ]; then
-	cd /workspace && sh /builds/download-tcllib.sh
+if [ ! -d /workspaces/tcllib ]; then
+	cd /workspaces && sh /builds/download-tcllib.sh
 fi
 
-echo "Running the autoconf configure in /workspace/tcllib"
-cd /workspace/tcllib
+echo "Running the autoconf configure in /workspaces/tcllib"
+cd /workspaces/tcllib
 autoreconf -vi
 ./configure --prefix=/usr --exec-prefix=/usr
 
-cd /workspace/tcllib
+cd /workspaces/tcllib
 echo "Building Tcllib"
 make
 make install

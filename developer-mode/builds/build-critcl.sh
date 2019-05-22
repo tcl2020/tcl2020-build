@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /workspace/critcl ]; then
-    cd /workspace && sh /builds/download-critcl.sh
+if [ ! -d /workspaces/critcl ]; then
+    cd /workspaces && sh /builds/download-critcl.sh
 fi
 
-cd /workspace/critcl
+cd /workspaces/critcl
 
 $TCLSH build.tcl install $TCLLIBPATH
 

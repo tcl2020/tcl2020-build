@@ -39,14 +39,14 @@ You can Docker exec into the container to compile and test installs.
 
 Run the build container in the background with Docker.
 ```
-mkdir -p $PWD/workspace
-docker run -d -v $PWD/workspace:/workspace -v $PWD/developer-mode/builds:/builds --name dev tcl-2020-dev
+mkdir -p $PWD/workspaces
+docker run -d -v $PWD/workspaces:/workspaces -v $PWD/developer-mode/builds:/builds --name dev tcl-2020-dev
 ```
 Build everything in tcl2020 using a docker exec.
 ```
 docker exec -it dev bash /builds/build-all.sh
 ```
-Modify the source code of any package in the workspace directory. Then you can use make, cmake, ... to rebuild the container with
+Modify the source code of any package in the workspaces directory. Then you can use make, cmake, ... to rebuild the container with
 the changes.  Use the build container with your favorite IDE.
 
 ## source packages for developer-mode

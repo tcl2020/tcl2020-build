@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /workspace/tclzlib ]; then
-	cd /workspace && sh /builds/download-tclzlib.sh
+if [ ! -d /workspaces/tclzlib ]; then
+	cd /workspaces && sh /builds/download-tclzlib.sh
 fi
 
-cd /workspace/tclzlib || exit 1
+cd /workspaces/tclzlib || exit 1
 autoreconf --force --install --verbose
 ./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include
 make && make install

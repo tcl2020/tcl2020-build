@@ -3,11 +3,11 @@
 
 build_setup
 
-if [ ! -d /workspace/tdom ]; then
-	cd /workspace && sh /builds/download-tdom.sh
+if [ ! -d /workspaces/tdom ]; then
+	cd /workspaces && sh /builds/download-tdom.sh
 fi
 
-cd /workspace/tdom || exit 1
+cd /workspaces/tdom || exit 1
 # TODO tdom will probably be patched at some time
 # to remove CONST84
 cd tdom-0.9.0 && ./configure CFLAGS='-DCONST84="const"' && make && make install
