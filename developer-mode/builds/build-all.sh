@@ -26,3 +26,5 @@ sh /builds/build-speedtables.sh
 sh /builds/build-socketservertcl.sh
 sh /builds/build-rl_json.sh
 sh /builds/build-tcl.gd.sh
+
+sh /builds/build-s6.sh
