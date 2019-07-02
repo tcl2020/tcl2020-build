@@ -28,5 +28,6 @@ sh /builds/build-socketservertcl.sh
 sh /builds/build-rl_json.sh
 sh /builds/build-tcl.gd.sh
 sh /builds/build-tclrmq.sh
+sh /builds/build-tclcurl-fa.sh
 
 sh /builds/build-s6.sh
