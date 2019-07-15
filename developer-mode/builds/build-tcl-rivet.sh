@@ -15,12 +15,12 @@ make install
 
 # configure rivet in Apache
 echo "LoadModule rivet_module /usr/lib/apache2/modules/mod_rivet.so" >/etc/apache2/mods-available/rivet.load
-cat <<EOF
+cat >/etc/apache2/mods-available/rivet.conf <<EOF
 <IfModule mod_rivet.c>
   AddType application/x-httpd-rivet .rvt
   AddType application/x-rivet-tcl .tcl
 </IfModule>
-EOF >/etc/apache2/mods-available/rivet.conf
+EOF
 
 # Enable rivet in Apache
 ln -s /etc/apache2/mods-available/rivet.load /etc/apache2/mods-enabled/rivet.load
