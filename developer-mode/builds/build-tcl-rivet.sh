@@ -9,7 +9,7 @@ fi
 
 cd /workspaces/tcl-rivet || exit 1
 autoreconf -vi
-./configure --with-tcl=/usr/lib --with-apache=/usr --with-apxs=/usr/bin/apxs --with-tclsh=/bin/tclsh --with-rivet-target-dir=/usr/lib/tcltk/rivet3.1  --enable-version-display
+./configure --with-tcl=/usr/lib --with-apache=/usr --with-apxs=/usr/bin/apxs --with-tclsh=/usr/bin/tclsh8.6 --with-rivet-target-dir=/usr/lib/tcltk/rivet3.1  --enable-version-display
 make
 make install
 
