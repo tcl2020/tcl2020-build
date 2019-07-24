@@ -22,6 +22,9 @@ echo "Building TCL"
 # cut down on the output to stdout to make Travis-CI consoles faster
 make 2>&1 | tee -a /workspaces/logs/tcl.log | cut -c1-64
 make install
+# Link to tclsh
+ln /usr/bin/tclsh8.6 /bin/tclsh
+ln /usr/bin/tclsh8.6 /usr/bin/tclsh
 
 build_cleanup
 
