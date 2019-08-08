@@ -28,6 +28,6 @@ build_git_clone () {
 build_cleanup () {
 	# fix any permissions messed up by the Docker user id
 	# allow edits to the source outside of the container
-	find /workspaces -type d -print0 | xargs -0 chmod go+rwx
-	find /workspaces -type f -print0 | xargs -0 chmod go+rw
+	find $(readlink -f /workspaces) -type d -print0 | xargs -0 chmod go+rwx
+	find $(readlink -f /workspaces) -type f -print0 | xargs -0 chmod go+rw
 }
