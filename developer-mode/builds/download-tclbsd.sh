@@ -1,2 +1,2 @@
-git clone https://github.com/flightaware/tclbsd.git
+git clone -b v1.9.0 https://github.com/flightaware/tclbsd.git
 
