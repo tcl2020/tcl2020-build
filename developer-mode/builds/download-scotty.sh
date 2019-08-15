@@ -1,2 +1,2 @@
-git clone https://github.com/flightaware/scotty.git
+git clone -b v3.1.1 https://github.com/flightaware/scotty.git
 

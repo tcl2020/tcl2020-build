@@ -1,1 +1,2 @@
-git clone https://github.com/flightaware/tcl.gd.git
+git clone -b v1.2 https://github.com/flightaware/tcl.gd.git
+

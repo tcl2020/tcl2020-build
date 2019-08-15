@@ -1,1 +1,1 @@
-git clone https://github.com/flightaware/speedtables.git
+git clone -b v1.13.10 https://github.com/flightaware/speedtables.git
