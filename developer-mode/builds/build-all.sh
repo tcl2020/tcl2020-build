@@ -20,7 +20,6 @@ sh /builds/build-pgtcl.sh
 sh /builds/build-tcl-rivet.sh
 sh /builds/build-zookeepertcl.sh
 sh /builds/build-tcludp.sh
-sh /builds/build-tclzlib.sh
 sh /builds/build-speedbag.sh
 sh /builds/build-kafkatcl.sh
 sh /builds/build-casstcl.sh
