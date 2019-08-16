@@ -3,9 +3,9 @@ FROM tcl2020/developer-mode:latest
 RUN touch /.tcl2020-build-core-8-6-branch-merge-20190206
 
 RUN cd /root && \
-    git clone https://github.com/TCL-2020/dockerfiles.git && \
+    git clone https://github.com/tcl2020/tcl2020-build.git && \
     mkdir /workspaces && \
-    cp -r dockerfiles/developer-mode/builds /builds && \
+    cp -r tcl2020-build/developer-mode/builds /builds && \
     cd /tmp && bash /builds/build-all.sh && \
     cp /workspaces/tcl/unix/tclsh /bin
 
