@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tcl2020/dockerfiles.svg?branch=master)](https://travis-ci.org/tcl2020/dockerfiles)
+[![Build Status](https://travis-ci.org/tcl2020/tcl2020-build.svg?branch=master)](https://travis-ci.org/tcl2020/tcl2020-build)
 
 Build and packaging system based on [Docker](http://docker.org)
 
