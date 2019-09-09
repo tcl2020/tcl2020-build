@@ -21,8 +21,5 @@ mv mime.tcl modules/mime/mime.tcl
 make
 make install
 
-/usr/bin/tclsh8.6 sak.tcl critcl
-cp -r modules/tcllibc /usr/lib/tcllibc
-
 build_cleanup
 
