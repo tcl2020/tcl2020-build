@@ -9,7 +9,7 @@ fi
 
 cd /workspaces/tcl.gd || exit 1
 autoreconf --force --install --verbose
-./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include
+./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include || exit 1
 make && make install
 
 build_cleanup
