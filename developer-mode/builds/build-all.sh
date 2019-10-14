@@ -31,5 +31,6 @@ sh /builds/build-tcl.gd.sh
 sh /builds/build-tclrmq.sh
 sh /builds/build-tclcurl-fa.sh
 sh /builds/build-libspatialite.sh
+sh /builds/build-memcached-for-Tcl.sh
 
 sh /builds/build-s6.sh
