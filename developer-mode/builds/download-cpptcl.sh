@@ -1,2 +1,1 @@
-git clone -b v2.2.1 https://github.com/flightaware/cpptcl.git
-
+git clone -b v2.2.2 https://github.com/flightaware/cpptcl.git
