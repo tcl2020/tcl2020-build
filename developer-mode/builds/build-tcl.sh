@@ -15,7 +15,7 @@ fi
 mkdir -p /workspaces/logs
 echo "Running the autoconf configure in /workspaces/tcl/unix"
 cd /workspaces/tcl/unix
-./configure TCL_PACKAGE_PATH="/usr/local/lib" CPPFLAGS='-DHAVE_FAST_TSD=1 -DFD_SETSIZE=16384' --prefix=/usr --exec-prefix=/usr 2>&1 | tee -a /workspaces/logs/tcl.log
+./configure TCL_PACKAGE_PATH="/usr/local/lib" CPPFLAGS='-DHAVE_FAST_TSD=1 -DFD_SETSIZE=16384' --prefix=/usr --exec-prefix=/usr --with-tzdata=no 2>&1 | tee -a /workspaces/logs/tcl.log
 
 cd /workspaces/tcl/unix
 echo "Building TCL"
