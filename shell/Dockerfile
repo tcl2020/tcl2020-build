@@ -11,6 +11,7 @@ RUN cd /root && \
 
 RUN echo "package require tclreadline" >/root/.tclshrc && \
     echo "namespace eval tclreadline { proc prompt1 {} { return {tcl> } } }" >>/root/.tclshrc && \
-    echo "::tclreadline::Loop" >>/root/.tclshrc
+    echo "::tclreadline::Loop" >>/root/.tclshrc && \
+    echo "set editing-mode vi" >/root/.inputrc
 
 CMD ["/bin/tclsh"] 
