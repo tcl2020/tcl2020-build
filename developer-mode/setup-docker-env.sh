@@ -1,9 +1,9 @@
 apt-get update -qq
 
 apt-get install -y git gcc-8 g++-8 make curl automake autoconf \
-    minizip vim libreadline-dev libtool python3-pip libyajl-dev \
+    minizip vim libreadline-dev libtool python3-pip python3-venv \
     libssl-dev openssl libpq-dev libzookeeper-mt-dev \
-    libboost-all-dev libuv1-dev swig3.0 \
+    libboost-all-dev libuv1-dev swig3.0 libyajl-dev \
     libgd-dev pkg-config gdb libcurl4-openssl-dev \
     libmemcached-dev libxml2-dev libxslt-dev apache2-dev apache2 \
     libgeos-dev libproj-dev libbsd-dev
