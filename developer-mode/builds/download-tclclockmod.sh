@@ -1,1 +1,1 @@
-git clone -b v8.6.705 https://github.com/flightaware/tclclockmod.git
+git clone -b v8.6.707 https://github.com/flightaware/tclclockmod.git
