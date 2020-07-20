@@ -1,6 +1,6 @@
 FROM tcl2020/developer-mode:latest
 
-RUN touch /.tcl2020-build-core-8-6-branch-merge-20190206
+RUN touch /.tcl2020-build-core-8-6-branch
 
 RUN cd /root && \
     git clone https://github.com/tcl2020/tcl2020-build.git && \

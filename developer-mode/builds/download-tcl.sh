@@ -1,1 +1,1 @@
-git clone --single-branch --branch origin/core-8-6-branch-merge-20190206 https://github.com/tcl2020/tcl.git
+git clone --single-branch --branch core-8-6-branch https://github.com/tcl2020/tcl.git
