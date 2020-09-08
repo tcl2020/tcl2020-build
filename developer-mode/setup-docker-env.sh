@@ -6,7 +6,7 @@ apt-get install -y git gcc-8 g++-8 make curl automake autoconf \
     libboost-all-dev libuv1-dev swig3.0 libyajl-dev \
     libgd-dev pkg-config gdb libcurl4-openssl-dev \
     libmemcached-dev libxml2-dev libxslt-dev apache2-dev apache2 \
-    libgeos-dev libproj-dev libbsd-dev
+    libgeos-dev libproj-dev libbsd-dev lsb-release
 
 pip3 install "cmake==3.17.2"
 
