@@ -27,7 +27,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build
-        run: |        
+        run: |
           mkdir build
           docker build -t tcl-2020-dev developer-mode
-          docker run -it -v $GITHUB_WORKSPACE/build:/workspaces -v $GITHUB_WORKSPACE/developer-mode/builds:/builds:ro --name dev tcl-2020-dev sh /builds/build-all.sh
+          
+      - name: Run
+        run: docker run -t -v $GITHUB_WORKSPACE/build:/workspaces -v $GITHUB_WORKSPACE/developer-mode/builds:/builds:ro --name dev tcl-2020-dev sh /builds/build-all.sh
