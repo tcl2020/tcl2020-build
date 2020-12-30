@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tcl2020/tcl2020-build.svg?branch=master)](https://travis-ci.org/tcl2020/tcl2020-build)
+![CI](https://github.com/bovine/tcl2020-build/workflows/CI/badge.svg)
 
 Build and packaging system based on [Docker](http://docker.org)
 
@@ -59,4 +59,4 @@ One shell script will download the source package: download-yourpackage.sh. The 
 will build the package: build-yourpackage.sh.
 Add your new build script, build-yourpackage.sh, to developer-mode/builds/build-all.sh.
 
-See the [.travis.yml](.travis.yml) file for the build actions.
+See the [.github/workflows/ci.yml](.github/workflows/ci.yml) file for the build actions.
