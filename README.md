@@ -13,7 +13,7 @@ By using Docker you can easily develop on Linux or OS X.
 ## Made for Github Actions
 This build system is intended to be used with a CI system.
 You can edit changes directly on github.com.
-Then, [Github Actions](https://github.com/features/actions) can build the system as part of the process of a pull request.
+Then, [Github Actions](https://github.com/tcl2020/tcl2020-build/actions) can build the system as part of the process of a pull request.
 If for example you need to make a small version change to a package, the CI build system will automatically
 check the build.
 
