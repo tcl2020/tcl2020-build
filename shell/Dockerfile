@@ -1,3 +1,5 @@
+LABEL org.opencontainers.image.source https://github.com/tcl2020/tcl2020-build
+
 FROM tcl2020/developer-mode:latest
 
 RUN touch /.tcl2020-build-core-8-6-branch
