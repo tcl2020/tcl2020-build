@@ -1,13 +1,14 @@
+LABEL org.opencontainers.image.source https://github.com/tcl2020/tcl2020-build
+
 FROM tcl2020/developer-mode:latest
 
 RUN touch /.tcl2020-build-core-8-6-branch
 
-RUN cd /root && \
-    git clone https://github.com/tcl2020/tcl2020-build.git && \
-    mkdir /workspaces && \
-    cp -r tcl2020-build/developer-mode/builds /builds && \
+COPY developer-mode/builds /builds
+
+RUN mkdir /workspaces && \
     cd /tmp && bash /builds/build-all.sh && \
-    cp /workspaces/tcl/unix/tclsh /bin
+    cp /workspaces/tcl/unix/tclsh /bin/
 
 RUN echo "package require tclreadline" >/root/.tclshrc && \
     echo "namespace eval tclreadline { proc prompt1 {} { return {tcl> } } }" >>/root/.tclshrc && \
