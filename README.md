@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tcl2020/tcl2020-build.svg?branch=master)](https://travis-ci.org/tcl2020/tcl2020-build)
+![CI](https://github.com/tcl2020/tcl2020-build/workflows/CI/badge.svg)
 
 Build and packaging system based on [Docker](http://docker.org)
 
@@ -10,10 +10,10 @@ The Docker image and container will manage all of the platform packages and buil
 for a source build.
 By using Docker you can easily develop on Linux or OS X.
 
-## Made for TravisCI.org
+## Made for Github Actions
 This build system is intended to be used with a CI system.
 You can edit changes directly on github.com.
-Then, [TravisCI.org](http://travisci.org) can build the system as part of the process of a pull request.
+Then, [Github Actions](https://github.com/tcl2020/tcl2020-build/actions) can build the system as part of the process of a pull request.
 If for example you need to make a small version change to a package, the CI build system will automatically
 check the build.
 
@@ -59,4 +59,4 @@ One shell script will download the source package: download-yourpackage.sh. The 
 will build the package: build-yourpackage.sh.
 Add your new build script, build-yourpackage.sh, to developer-mode/builds/build-all.sh.
 
-See the [.travis.yml](.travis.yml) file for the build actions.
+See the [.github/workflows/ci.yml](.github/workflows/ci.yml) file for the build actions.
