@@ -1,2 +1,2 @@
-git clone -b v2.6.3 https://github.com/flightaware/Pgtcl.git
+git clone -b v2.7.6 https://github.com/flightaware/Pgtcl.git
 
