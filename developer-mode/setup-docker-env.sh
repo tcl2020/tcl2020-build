@@ -1,5 +1,10 @@
 apt-get update -qq
 
+DEBIAN_FRONTEND=noninteractive apt-get upgrade -q -y -u \
+	       -o Dpkg::Options::=--force-confold \
+	       -o Dpkg::Options::=--force-confdef \
+	       --allow-downgrades --allow-remove-essential --allow-change-held-packages
+
 apt-get install -y git gcc-8 g++-8 make curl automake autoconf \
     minizip vim libreadline-dev libtool python3-pip python3-venv \
     libssl-dev openssl libpq-dev libzookeeper-mt-dev \
