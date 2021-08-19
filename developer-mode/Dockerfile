@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM ubuntu:focal
 
 COPY setup-docker-env.sh /root/setup-docker-env.sh
 
