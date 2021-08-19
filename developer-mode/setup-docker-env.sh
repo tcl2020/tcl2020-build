@@ -1,5 +1,5 @@
-#!/bin/set -e
 export DEBIAN_FRONTEND=noninteractive
+set -e
 
 apt-get update -qq
 
