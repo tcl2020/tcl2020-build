@@ -4,7 +4,7 @@ Build and packaging system based on [Docker](http://docker.org)
 
 The developer-mode Dockerfile is a monolithic source based build.
 All of the packages are compiled from source on top of a minimal
-OS image based on [Debian-slim](https://hub.docker.com/_/debian/).
+OS image based on [ubuntu:focal](https://hub.docker.com/_/ubuntu/).
 You need to provide a Docker container on your platform.
 The Docker image and container will manage all of the platform packages and build tools needed
 for a source build.
