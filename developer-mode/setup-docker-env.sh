@@ -19,7 +19,7 @@ rm /usr/share/keyrings/kitware-archive-keyring.gpg
 apt-get install -y kitware-archive-keyring
 
 echo "here come the installs"
-apt-get install -y git gcc-8 g++-8 make curl automake autoconf \
+apt-get install -y git gcc-10 g++-10 cpp-10 make curl automake autoconf \
     minizip vim libreadline-dev libtool python3-pip python3-venv \
     libssl-dev openssl libpq-dev libzookeeper-mt-dev \
     libboost-all-dev libuv1-dev swig3.0 libyajl-dev \
@@ -27,9 +27,7 @@ apt-get install -y git gcc-8 g++-8 make curl automake autoconf \
     libmemcached-dev libxml2-dev libxslt-dev apache2-dev apache2 \
     libgeos-dev libproj-dev libbsd-dev lsb-release cmake
 
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
-update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
-update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 9
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
+	--slave /usr/bin/g++ g++ /usr/bin/g++-10 --slave /usr/bin/gcov gcov /usr/bin/gcov-10
 
 dpkg-query -l 2>&1 | sed "s,^,package-selections: ,"
