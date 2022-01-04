@@ -31,7 +31,7 @@ jobs:
       - name: Build dev image
         run: |
           mkdir build
-          docker build -t tcl-2020-dev developer-mode
+          docker build -t developer-mode developer-mode
 
       - name: Build image
         run: docker build . --file shell/Dockerfile --tag $IMAGE_NAME
