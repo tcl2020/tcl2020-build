@@ -1,4 +1,4 @@
-FROM tcl2020/developer-mode:latest
+FROM tcl-2020-dev:latest
 
 LABEL org.opencontainers.image.source https://github.com/tcl2020/tcl2020-build
 
