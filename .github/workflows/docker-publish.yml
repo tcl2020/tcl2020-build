@@ -31,10 +31,10 @@ jobs:
       - name: Build dev image
         run: |
           mkdir build
-          docker build -t tcl-2020-dev developer-mode
+          docker build -t tcl-2020-dev:$GITHUB_RUN_ID developer-mode
 
       - name: Build image
-        run: docker build . --file shell/Dockerfile --tag $IMAGE_NAME
+        run: docker build . --file shell/Dockerfile --build-arg IMAGE_TAG=$GITHUB_RUN_ID --tag $IMAGE_NAME
 
       - name: Log into registry
         run: echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ secrets.GHCR_USER }} --password-stdin
