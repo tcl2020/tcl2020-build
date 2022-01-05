@@ -1,4 +1,5 @@
-FROM tcl-2020-dev:latest
+ARG IMAGE_TAG=latest
+FROM tcl-2020-dev:$IMAGE_TAG
 
 LABEL org.opencontainers.image.source https://github.com/tcl2020/tcl2020-build
 
