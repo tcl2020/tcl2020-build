@@ -1,9 +1,11 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
 
-if [ ! -d /workspaces/tclx ]; then 
+if [ ! -d /workspaces/tclx ]; then
 	cd /workspaces && sh /builds/download-tclx.sh
 fi
 

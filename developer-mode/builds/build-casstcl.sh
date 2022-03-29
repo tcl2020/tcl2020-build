@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
@@ -16,7 +18,7 @@ make install
 
 cd /workspaces/casstcl || exit 1
 autoreconf --force --install --verbose
-./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include 
+./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include
 make && make install
 
 build_cleanup

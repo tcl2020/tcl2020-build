@@ -1,9 +1,11 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
 
-if [ ! -d /workspaces/tcl ]; then 
+if [ ! -d /workspaces/tcl ]; then
     cd /workspaces && sh /builds/download-tcl.sh
 fi
 
@@ -28,7 +30,7 @@ if [ ! -f /bin/tclsh ]; then
 fi
 if [ ! -f /usr/bin/tclsh ]; then
     ln /usr/bin/tclsh8.6 /usr/bin/tclsh
-fi 
+fi
 
 build_cleanup
 

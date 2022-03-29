@@ -31,3 +31,4 @@ build_cleanup () {
 	find $(readlink -f /workspaces) -type d -print0 | xargs -0 chmod go+rwx
 	find $(readlink -f /workspaces) -type f -print0 | xargs -0 chmod go+rw
 }
+

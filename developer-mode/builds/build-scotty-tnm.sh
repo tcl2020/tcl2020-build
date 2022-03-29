@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
@@ -8,7 +10,7 @@ if [ ! -d /workspaces/scotty ]; then
 fi
 
 cd /workspaces/scotty/tnm || exit 1
-autoreconf --force --install --verbose 
+autoreconf --force --install --verbose
 ./configure ; make ; make install ; make sinstall
 
 build_cleanup
