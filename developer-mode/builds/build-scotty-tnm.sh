@@ -8,8 +8,8 @@ if [ ! -d /workspaces/scotty ]; then
 fi
 
 cd /workspaces/scotty/tnm || exit 1
-autoreconf --force --install --verbose && \
-./configure && make && make install && make sinstall
+autoreconf --force --install --verbose 
+./configure ; make ; make install ; make sinstall
 
 build_cleanup
 

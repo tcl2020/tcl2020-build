@@ -18,7 +18,7 @@ fi
 cd "/workspaces/tdom/$BUILD_VERSION/" || exit 1
 # TODO tdom will probably be patched at some time
 # to remove CONST84
-./configure CFLAGS='-DCONST84="const"' && make && make install
+./configure CFLAGS='-DCONST84="const"' ; make ; make install
 
 build_cleanup
 

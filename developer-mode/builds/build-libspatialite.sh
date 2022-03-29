@@ -18,6 +18,6 @@ fi
 cd "/workspaces/libspatialite/$BUILD_VERSION/" || exit 1
 autoreconf -vi
 ./configure --prefix=/usr/local --exec-prefix=/usr/local --disable-freexl
-make && make install
+make ; make install
 
 build_cleanup

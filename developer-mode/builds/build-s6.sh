@@ -10,8 +10,8 @@ fi
 
 cd /workspaces/s6 || exit 1
 
-cd skalibs && ./configure && make && make install && \
-cd ../execline && ./configure && make && make install && \
-cd ../s6 && ./configure && make && make install
+cd skalibs ; ./configure ; make ; make install 
+cd ../execline ; ./configure ; make ; make install
+cd ../s6 ; ./configure ; make ; make install
 
 build_cleanup

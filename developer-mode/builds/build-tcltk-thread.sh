@@ -10,7 +10,7 @@ fi
 cd /workspaces/thread
 # TODO replace this copy of tclconfig
 mkdir tclconfig && cp ../tcllauncher/tclconfig/* tclconfig
-./configure && make && make install
+./configure ; make ; make install
 
 build_cleanup
 

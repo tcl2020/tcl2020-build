@@ -10,6 +10,6 @@ fi
 cd /workspaces/speedbag || exit 1
 autoreconf --force --install --verbose
 ./configure  --with-tcl=/usr/lib --with-tclinclude=/usr/include
-make && make install
+make ; make install
 
 build_cleanup

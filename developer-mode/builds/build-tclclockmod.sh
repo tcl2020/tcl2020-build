@@ -10,6 +10,6 @@ fi
 . $TCL_CONFIG
 export LIBS="$TCL_LIBS"
 
-cd /workspaces/tclclockmod && autoreconf -vi && ./configure && make && make install
+cd /workspaces/tclclockmod ; autoreconf -vi ; ./configure ; make ; make install
 
 build_cleanup
