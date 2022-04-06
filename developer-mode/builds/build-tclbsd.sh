@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
@@ -8,7 +10,7 @@ if [ ! -d /workspaces/tclbsd ]; then
 fi
 
 cd /workspaces/tclbsd || exit 1
-autoreconf -vi && ./configure && make && make install
+autoreconf -vi ; ./configure ; make ; make install
 
 build_cleanup
 

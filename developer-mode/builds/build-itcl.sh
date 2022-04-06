@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
@@ -12,8 +14,8 @@ cd /workspaces/itcl || exit 1
 # iTcl does not have the TEA files
 # copy them from another project for now
 # we should checkout TEA and use that
-mkdir tclconfig && cp ../tcllauncher/tclconfig/* tclconfig
-./configure && make all && make install
+mkdir tclconfig ; cp ../tcllauncher/tclconfig/* tclconfig/.
+./configure ; make all ; make install
 
 build_cleanup
 

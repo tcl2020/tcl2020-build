@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
@@ -10,7 +12,7 @@ fi
 . $TCL_CONFIG
 export LIBS="$TCL_LIBS"
 
-cd /workspaces/tcllauncher && autoreconf -vi && ./configure && make && make install
+cd /workspaces/tcllauncher ; autoreconf -vi ; ./configure ; make ; make install
 
 build_cleanup
 

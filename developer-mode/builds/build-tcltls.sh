@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
@@ -16,7 +18,7 @@ else
 	echo "Building /workspaces/tcltls/$BUILD_VERSION"
 fi
 cd "/workspaces/tcltls/$BUILD_VERSION/" || exit 1
-./configure --with-openssl-dir=/usr/lib/ssl && make && make install
+./configure --with-openssl-dir=/usr/lib/ssl ; make ; make install
 
 build_cleanup
 

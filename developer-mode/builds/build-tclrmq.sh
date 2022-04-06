@@ -1,9 +1,11 @@
-#!/bin/sh -e
+#!/bin/sh
+
+set -e
 . /builds/common.sh
 
 build_setup
 
-if [ ! -d /workspaces/tclrmq ]; then 
+if [ ! -d /workspaces/tclrmq ]; then
 	cd /workspaces && sh /builds/download-tclrmq.sh
 fi
 
