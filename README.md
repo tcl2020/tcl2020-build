@@ -24,6 +24,10 @@ This image can be created with
 
 ```docker build -t tcl-2020-dev developer-mode```
 
+If rebuilding and changes have been made, add the --no-cache option or it won't pick them up.
+
+```docker build -t tcl-2020-dev developer-mode --no-cache```
+
 This Docker image has all the required platform packages.
 The platform packages are installed in the script [developer-mode/setup-docker-env.sh](developer-mode/setup-docker-env.sh).
 This script loads all of the Linux configurations.
