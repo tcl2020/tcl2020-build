@@ -24,9 +24,9 @@ apt-get install -y git gcc-10 g++-10 cpp-10 make curl automake autoconf \
     libssl-dev openssl libpq-dev libzookeeper-mt-dev \
     libboost-all-dev libuv1-dev swig3.0 libyajl-dev \
     libgd-dev pkg-config gdb libcurl4-openssl-dev \
-    libmemcached-dev libxml2-dev libxslt-dev apache2-dev apache2 \
+    libxml2-dev libxslt-dev apache2-dev apache2 \
     libgeos-dev libproj-dev libbsd-dev lsb-release cmake \
-    libminizip-dev
+    libminizip-dev flex bison
 
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
 	--slave /usr/bin/g++ g++ /usr/bin/g++-10 --slave /usr/bin/gcov gcov /usr/bin/gcov-10
