@@ -2,14 +2,24 @@
 #
 # Use the dev docker image to run a complete build. Loosen security for easier debugging.
 
+# Check to see if the container is already there
+if docker inspect dev > /dev/null 2>&1
+then echo "dev container already exists, please be sure you're finished up before blowing things away underneath it"; exit
+fi
+
 # Clean up from previous builds
 if [ -d workspaces ]
-then rm -rf $PWD/workspaces || echo "You've probably got some root-owned trash in workspaces" && exit
+then
+  if rm -rf $PWD/workspaces
+  then echo "Clean"
+  else echo "You've probably got some root-owned trash in workspaces" ; exit
+  fi
 fi
 mkdir -p $PWD/workspaces
 
-# Run with debugging. Maybe add -v $HOME:$HOME for access to your own cloned repos.
+# Run with debugging.
 docker run -d \
+	-v $HOME:$HOME \
 	-v $PWD/workspaces:/workspaces -v $PWD/developer-mode/builds:/builds \
 	--cap-add=SYS_PTRACE --security-opt=apparmor:unconfined --security-opt=seccomp:unconfined \
 	--name dev tcl-2020-dev
