@@ -19,7 +19,7 @@ else
 fi
 cd "/workspaces/sqlite/$BUILD_VERSION/" || exit 1
 autoreconf -vi
-env CFLAGS=-DSQLITE_ENABLE_COLUMN_METADATA=1 ./configure --prefix=/usr --exec-prefix=/usr
+env CFLAGS="-DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_MAX_ATTACHED=125" ./configure --prefix=/usr --exec-prefix=/usr
 make
 echo Installing sqlite3 over any package install
 cp sqlite3.h sqlite3ext.h /usr/include
