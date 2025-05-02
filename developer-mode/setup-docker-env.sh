@@ -18,6 +18,8 @@ apt-get update -qq
 rm /usr/share/keyrings/kitware-archive-keyring.gpg
 apt-get install -y kitware-archive-keyring
 
+#apt list --all-versions cmake; exit
+
 echo "here come the installs"
 apt-get install -y git gcc-10 g++-10 cpp-10 make curl automake autoconf \
     minizip vim libreadline-dev libtool python3-pip python3-venv \
@@ -25,7 +27,7 @@ apt-get install -y git gcc-10 g++-10 cpp-10 make curl automake autoconf \
     libboost-all-dev libuv1-dev swig3.0 libyajl-dev \
     libgd-dev pkg-config gdb libcurl4-openssl-dev \
     libxml2-dev libxslt-dev apache2-dev apache2 \
-    libgeos-dev libproj-dev libbsd-dev lsb-release cmake \
+    libgeos-dev libproj-dev libbsd-dev lsb-release cmake-data=3.31.7-0kitware1ubuntu20.04.1 cmake=3.31.7-0kitware1ubuntu20.04.1 \
     libminizip-dev flex bison
 
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
