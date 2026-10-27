@@ -23,7 +23,6 @@ jobs:
   push:
 
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
     permissions:
       packages: write
       contents: read
@@ -47,6 +46,7 @@ jobs:
         run: docker build . --file shell/Dockerfile --build-arg IMAGE_TAG=$GITHUB_RUN_ID --tag $IMAGE_NAME
 
       - name: Push image
+        if: github.event_name == 'push'
         run: |
           IMAGE_ID=$REGISTRY/${{ github.repository }}/$IMAGE_NAME
 
